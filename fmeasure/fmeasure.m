@@ -55,7 +55,7 @@ switch upper(Measure)
         P2 = 3*imfilter(Image, M2, 'replicate', 'conv')/10 ...
             -imfilter(Image, M2', 'replicate', 'conv')/5;
         P3 = -imfilter(Image, M2, 'replicate', 'conv')/5 ...
-            +3*imfilter(Image, M2, 'replicate', 'conv')/10;
+            +3*imfilter(Image, M2', 'replicate', 'conv')/10;
         FM = abs(P0) + abs(P1) + abs(P2) + abs(P3);
         FM = mean2(FM);
         
